@@ -1,13 +1,7 @@
 pipeline {
  agent any
  
- stages {
- stage(‘checkout’) {
-   steps {
-     git branch: 'master', url: 'https://github.com/mayurdeshmukh/spring-project'
-       }
-   }
-   
+ stages {   
  stage('Set Terraform path') {
   steps {
    script {
