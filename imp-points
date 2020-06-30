@@ -1,0 +1,5 @@
+* Terraform is push based tool.
+-----------------
+To get value from a output
+aws_instance.label.value(ip/domain/etc)
+Resource_type-->label-of-resource-->value
