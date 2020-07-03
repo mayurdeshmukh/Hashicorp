@@ -30,18 +30,3 @@ variable "server_version" {
 }
 
 
-variable "db_edition" {
-  description = "The edition of the database to be created."
-  default     = "Basic"
-}
-
-variable "service_objective_name" {
-  description = "The performance level for the database. For the list of acceptable values, see https://docs.microsoft.com/en-gb/azure/sql-database/sql-database-service-tiers. Default is Basic."
-  default     = "Basic"
-}
-
-variable "collation" {
-  description = "The collation for the database. Default is SQL_Latin1_General_CP1_CI_AS"
-  default     = "SQL_Latin1_General_CP1_CI_AS"
-}
-
