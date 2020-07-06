@@ -26,6 +26,27 @@ variable azure_devops_org_name {
 variable azure_devops_personal_access_token {
   type        = string
   description = "The personal access token to use to connect to Azure DevOps (see https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/v2-windows?view=azure-devops#permissions)"
-  default     = "kset4hm2utjbxqza"
+  default     = "kset4hm2wua3iw62mqqza"
 }
 
+variable linux_agents_configuration {
+  type = object({
+    count             = string,
+    docker_image      = string,
+    docker_tag        = string,
+    agent_name_prefix = string,
+    agent_pool_name   = string,
+    cpu               = string,
+    memory            = string
+  })
+  description = "(Optional) The configuration of the Linux agents to deploy"
+  default = {
+    count             = 2,
+    docker_image      = "jcorioland/aci-devops-agent",
+    docker_tag        = "0.2-linux",
+    agent_name_prefix = "linux-agent",
+    agent_pool_name   = "Azure Pipelines",
+    cpu               = "1",
+    memory            = "2"
+  }
+}
