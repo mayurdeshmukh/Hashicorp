@@ -1,0 +1,20 @@
+To Create Terraboard infra setup
+
+sudo docker run -d --name db \
+  -e POSTGRES_USER=gorm \
+  -e POSTGRES_DB=gorm \
+  -e POSTGRES_PASSWORD="mypassword" \
+  --net terranet \
+  --restart=always postgres
+  
+sudo docker run -p 8080:8080 \
+  -e TFE_ADDRESS="https://app.terraform.io" \
+  -e TFE_TOKEN="5QyWy7JMYqgcEA.atlarGxu4SipUf7Y7VcNqdyU" \
+  -e TFE_ORGANIZATION="YASH_Technologies_Azure" \
+  -e DB_PASSWORD="mypassword" \
+  -e DB_USER="gorm" \
+  -e DB_NAME="gorm" \
+  -e DB_PORT="5432" \
+  -e DB_SSLMODE=disable \
+  --net terranet \
+  camptocamp/terraboard:latest
