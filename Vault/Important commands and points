@@ -1,3 +1,4 @@
+
 Vault Configuration Important points
 
 Before using cli of vault these are the prereq.
@@ -7,5 +8,27 @@ echo "export VAULT_ADDR=http://127.0.0.1:8200" >> ~/.bashrc
 export VAULT_TOKEN="s.sDrDV3gjhYLmORlXeZdfpJH3"
 
 
+###########################################################################
+
+
+
 Configure the password for a user - 
 vault  write auth/userpass/users/mayur password="random@123"
+
+
+
+###########################################################################
+
+Policies Example
+
+path "prod/*" {
+  capabilities = ["list", "read", "update", "create"]
+}
+
+path "database/*" {
+  capabilities = ["list"]
+}
+
+path "prod/webserver/*" {
+  capabilities = ["create", "read", "update", "delete", "list"]
+}
