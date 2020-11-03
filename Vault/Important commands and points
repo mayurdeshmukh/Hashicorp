@@ -10,10 +10,23 @@ export VAULT_TOKEN="s.sDrDV3gjhYLmORlXeZdfpJH3"
 
 ###########################################################################
 
+Commands for vault
 
-
-Configure the password for a user - 
+## Configure the password for a user - 
 vault  write auth/userpass/users/mayur password="random@123"
+
+## Write a command to key value store
+vault kv put [storepath]/[keyname] key=value
+
+## Retrieve the secret
+vault kv get [storepath/keyname]
+
+## Update the secret
+vault kv put [storepath]/[keyname] key=value
+
+## Delete the secret
+vault kv delete [storepath/keyname]
+
 
 
 
