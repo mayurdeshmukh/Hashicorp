@@ -1,0 +1,5 @@
+
+Permission need to create a temp Service Prinipal - https://discuss.hashicorp.com/t/azure-secrets-engine/2090/6
+
+Azure with Vault ( Generate temp Service role ) https://blog.nico-schiering.de/creating-dynamic-azure-service-principals-for-terraform-with-hashicorp-vault/
+                                                https://www.vaultproject.io/docs/secrets/azure
