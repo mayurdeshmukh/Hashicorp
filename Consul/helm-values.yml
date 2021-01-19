@@ -1,3 +1,5 @@
+# Refrence https://learn.hashicorp.com/tutorials/consul/kubernetes-deployment-guide
+
 global:
 datacenter: dc1
 image: "consul:latest"
